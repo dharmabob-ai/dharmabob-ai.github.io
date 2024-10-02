@@ -2,6 +2,7 @@
 const services = [
   {
     name: 'Shri Bob Thurman',
+    link: 'https://bobthurman.com/',
     image: '/assets/team-1.webp',
     description:
       'Bob Thurman, our revered Chairperson, brings to Dharma Bob a profound understanding of Buddhist philosophy and an engaging personality that captivates audiences worldwide. His illustrious career as a scholar, coupled with his dedication to making ancient wisdom accessible and relevant, guides our mission to offer a modern, playful approach to personal growth through the app’s dynamic interactions.',
@@ -36,9 +37,9 @@ const services = [
           services.map((item) => (
             <li class="bg-primary-500/10 dark:bg-primary-400/10 flex flex-col gap-12 rounded-3xl px-6 py-8">
               <div class="space-y-6">
-                <img class="mx-auto h-auto w-64 rounded-lg" src={item.image} alt={item.name} />
+                {item.link ? <a href={item.link} target="_blank"><img class="mx-auto h-auto w-64 rounded-lg" src={item.image} alt={item.name} /></a> : <img class="mx-auto h-auto w-64 rounded-lg" src={item.image} alt={item.name} />}
                 <div class="text-center">
-                  <h3 class="text-lg font-medium">{item.name}</h3>
+                  <h3 class="text-lg font-medium">{item.link ? <a href={item.link} target="_blank">{item.name}</a> : item.name}</h3>
                   <p class="text-primary-950/70 dark:text-primary-200/70 text-base sm:text-lg">
                     {item.description}
                   </p>
