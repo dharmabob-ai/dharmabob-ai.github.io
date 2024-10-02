@@ -1,20 +1,26 @@
 ---
 const services = [
   {
-    name: 'Floyd Lowe',
+    name: 'Shri Bob Thurman',
     image: '/assets/team-1.webp',
     description:
       'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
   },
   {
-    name: 'Emma Dorsey',
+    name: 'John Campbell',
     image: '/assets/team-2.webp',
     description:
       'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
   },
   {
-    name: 'Emily Mitchell',
+    name: 'Rajeev Panwar',
     image: '/assets/team-3.webp',
+    description:
+      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+  },
+  {
+    name: 'Corey Hanson',
+    image: '/assets/team-4.webp',
     description:
       'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
   },
@@ -30,7 +36,7 @@ const services = [
           services.map((item) => (
             <li class="bg-primary-500/10 dark:bg-primary-400/10 flex flex-col gap-12 rounded-3xl px-6 py-8">
               <div class="space-y-6">
-                <img class="mx-auto h-auto w-16 rounded-full" src={item.image} alt={item.name} />
+                <img class="mx-auto h-auto w-64 rounded-lg" src={item.image} alt={item.name} />
                 <div class="text-center">
                   <h3 class="text-lg font-medium">{item.name}</h3>
                   <p class="text-primary-950/70 dark:text-primary-200/70 text-base sm:text-lg">

@@ -15,8 +15,21 @@ import Layout from '../layouts/Layout.astro';
 >
   <Hero />
   <CoreTeam />
-  <Expertise />
   <About />
+  <Expertise />
+  <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+    <div class="flex flex-col gap-16">
+      <div class="flex flex-col items-start gap-8 sm:gap-10 justify-center items-center">
+        <img
+              class="h-auto w-256 rounded-3xl"
+              width="640"
+              height="640"
+              src="/assets/mandala.jpg"
+              alt="Mandala"
+            />
+      </div>
+    </div>
+  </div>
 <!--  <Testimonials /> -->
   <Cta />
 </Layout>
