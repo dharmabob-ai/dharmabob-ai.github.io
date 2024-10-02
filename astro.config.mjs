@@ -8,5 +8,5 @@ export default defineConfig({
     viewTransitions: true,
   },
   integrations: [tailwind(), compress()],
-  site: 'https://dharmabob-ai.github.io'
+  site: 'https://shreecollective.com'
 });

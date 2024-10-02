@@ -1,38 +1,37 @@
 ---
 const features = [
   {
-    id: 'expertise-1',
-    name: 'Digital Experience Platforms',
+    id: 'roadmap-1',
+    name: 'DharmaBob.ai',
+    date: '12-31-2024',
     description:
       'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
   },
   {
-    id: 'expertise-2',
-    name: 'Web & Mobile Development',
+    id: 'roadmap-2',
+    name: 'Computer Vision Asana Practice Module',
+    date: '2025',
     description:
       'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
   },
   {
-    id: 'expertise-3',
-    name: 'Serverless Computing Platforms',
+    id: 'roadmap-3',
+    name: 'Astrology Module',
+    date: '2026',
     description:
       'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
   },
   {
-    id: 'expertise-4',
-    name: 'Build & Test Automation Tools',
+    id: 'roadmap-4',
+    name: 'Sleep Module',
+    date: '2026',
     description:
       'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
   },
   {
-    id: 'expertise-5',
-    name: 'Artificial Intelligence',
-    description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-  },
-  {
-    id: 'expertise-6',
-    name: 'Full project support',
+    id: 'roadmap-5',
+    name: 'Detoxification Module',
+    date: '2026',
     description:
       'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
   },
@@ -69,7 +68,7 @@ const features = [
                     x-bind:aria-expanded="isOpen.toString()"
                   >
                     <div class="group-focus-visible:outline-primary-950 dark:group-focus-visible:outline-primary-200 flex items-center justify-between rounded-3xl group-focus-visible:outline group-focus-visible:outline-2 group-focus-visible:outline-offset-2">
-                      <span class="font-medium">{feature.name}</span>
+                      <span class="font-medium"><strong>{feature.name}</strong><br><em>Expected: {feature.date}</em></span>
                       <span class="ml-6 flex h-7 items-center">
                         <svg
                           class="text-primary-600 dark:text-primary-400 h-6 w-6 rotate-0 transform transition duration-200 ease-in-out"
