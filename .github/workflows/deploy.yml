@@ -17,6 +17,8 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      WEB3_API_KEY: ${{ secrets.WEB3_API_KEY }}
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@v3

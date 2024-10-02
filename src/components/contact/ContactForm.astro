@@ -1,3 +1,7 @@
+---
+const apiKey = import.meta.env.WEB3_API_KEY;
+---
+
 <section class="py-16 sm:py-20">
   <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
     <div class="grid gap-12 lg:grid-cols-2 lg:gap-8">
@@ -7,17 +11,19 @@
           Embrace the journey. Let’s explore how we can cultivate personal growth together through technology.
         </p>
       </div>
-      <form action="#" method="POST" class="mt-3 flex flex-col gap-y-6">
+      <form action="https://api.web3forms.com/submit" method="POST" class="mt-3 flex flex-col gap-y-6">
         <!-- Full name input -->
         <div>
           <label for="full-name" class="sr-only">Full name</label>
+          <input type="hidden" name="access_key" value={ apiKey }>
           <input
             type="text"
-            name="full-name"
+            name="name"
             id="full-name"
             autocomplete="name"
             class="hover:ring-primary-600 focus:ring-primary-600 dark:hover:ring-primary-400 dark:focus:ring-primary-400 bg-primary-50 dark:bg-primary-950 ring-primary-900/40 dark:ring-primary-200/40 placeholder:text-primary-950/60 dark:placeholder:text-primary-200/60 block w-full appearance-none rounded-md border-0 px-4 py-4 text-base ring-1 transition focus:outline-none focus:ring-2"
             placeholder="Full name"
+            required
           />
         </div>
 
@@ -31,6 +37,7 @@
             autocomplete="email"
             class="hover:ring-primary-600 focus:ring-primary-600 dark:hover:ring-primary-400 dark:focus:ring-primary-400 bg-primary-50 dark:bg-primary-950 ring-primary-900/40 dark:ring-primary-200/40 placeholder:text-primary-950/60 dark:placeholder:text-primary-200/60 block w-full appearance-none rounded-md border-0 px-4 py-4 text-base ring-1 transition focus:outline-none focus:ring-2"
             placeholder="Email"
+            required
           />
         </div>
 
@@ -42,7 +49,13 @@
             id="message"
             rows="3"
             class="hover:ring-primary-600 focus:ring-primary-600 dark:hover:ring-primary-400 dark:focus:ring-primary-400 bg-primary-50 dark:bg-primary-950 ring-primary-900/40 dark:ring-primary-200/40 placeholder:text-primary-950/60 dark:placeholder:text-primary-200/60 block w-full appearance-none rounded-md border-0 px-4 py-4 text-base ring-1 transition focus:outline-none focus:ring-2"
-            placeholder="Message"></textarea>
+            placeholder="Message"
+            required></textarea>
+        </div>
+
+        <!-- Honeypot Spam Protection -->
+        <div>
+          <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
         </div>
 
         <div>
