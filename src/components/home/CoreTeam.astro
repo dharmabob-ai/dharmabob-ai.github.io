@@ -9,21 +9,24 @@ const services = [
   },
   {
     name: 'John Campbell',
+    link: 'https://events.thus.org/teacher/john-r-b-campbell-phd/',
     image: '/assets/team-2.webp',
     description:
-      'John Campbell, our Principal Asana Vision Architect, brings over two decades of experience as an Ashtanga Yoga practitioner and teacher to lead the development of Dharma Bob’s computer vision yoga module. His deep expertise ensures that our users receive high-quality, insightful guidance as they cultivate their practice with the app.',
+      'John Campbell, our Principal Asana Vision Architect is a renowned Sanskrit and Tibetan translator and a Fulbright Fellow bringing over two decades of Ashtanga Yoga practice and teaching to lead the development of Dharma Bob’s Computer Vision Yoga Module. His deep expertise ensures that our users receive high-quality, insightful guidance as they cultivate their practice with the app.',
   },
   {
     name: 'Rajeev Panwar',
+    link: 'https://www.linkedin.com/in/rajeev-panwar/',
     image: '/assets/team-3.webp',
     description:
-      'Rajeev Panwar, our Founder and CEO, brings a unique blend of financial acumen and spiritual depth to Shree Collective. With extensive experience in real estate investments and data analytics, coupled with his deep practice in various yoga disciplines and reiki, Rajeev leads Dharma Bob\'s mission-driven growth while fostering a holistic approach to personal development.',
+      'Rajeev Panwar, our Founder and CEO, brings a unique blend of financial acumen and spiritual depth to Shree Collective. With extensive experience in data analytics, coupled with his deep practice in various yoga disciplines and reiki, Rajeev leads Dharma Bob\'s mission-driven growth while fostering a holistic approach to personal development.',
   },
   {
     name: 'Corey Hanson',
+    link: 'https://www.linkedin.com/in/coreyhanson/',
     image: '/assets/team-4.webp',
     description:
-      'Corey Hanson, our Cofounder and CTO, combines technical expertise with creative flair to lead Dharma Bob\’s innovative AI features. His passion for balance between tech and art drives the app\'s engaging and profound interactions.',
+      'Corey Hanson, our Cofounder and CTO, combines technical expertise with creative flair to lead Dharma Bob\’s innovative AI features. With years of experience in machine learning in the non-profit sector and a passion for balancing innovation with artistic expression, Corey is the driving force behind Dharma Bob\'s engaging and profound interactions.',
   },
 ];
 ---
@@ -39,7 +42,7 @@ const services = [
               <div class="space-y-6">
                 {item.link ? <a href={item.link} target="_blank"><img class="mx-auto h-auto w-64 rounded-lg" src={item.image} alt={item.name} /></a> : <img class="mx-auto h-auto w-64 rounded-lg" src={item.image} alt={item.name} />}
                 <div class="text-center">
-                  <h3 class="text-lg font-medium">{item.link ? <a href={item.link} target="_blank">{item.name}</a> : item.name}</h3>
+                  <h3 class="text-lg font-medium, underline"><strong>{item.link ? <a href={item.link} target="_blank">{item.name}</a> : item.name}</strong></h3>
                   <p class="text-primary-950/70 dark:text-primary-200/70 text-base sm:text-lg">
                     {item.description}
                   </p>
