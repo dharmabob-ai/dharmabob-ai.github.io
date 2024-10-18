@@ -3,6 +3,7 @@ const services = [
   {
     name: 'Shri Bob Thurman',
     link: 'https://bobthurman.com/',
+    footnote: "Padma Shri, Govt of India, 2020",
     image: '/assets/team-1.webp',
     description:
       'Bob Thurman, our revered Chairperson, brings to Dharma Bob a profound understanding of Buddhist philosophy and an engaging personality that captivates audiences worldwide. His illustrious career as a scholar, coupled with his dedication to making ancient wisdom accessible and relevant, guides our mission to offer a modern, playful approach to personal growth through the app’s dynamic interactions.',
@@ -43,7 +44,8 @@ const services = [
                 {item.link ? <a href={item.link} target="_blank"><img class="mx-auto h-auto w-64 rounded-lg" src={item.image} alt={item.name} /></a> : <img class="mx-auto h-auto w-64 rounded-lg" src={item.image} alt={item.name} />}
                 <div class="text-center">
                   <h3 class="text-lg font-medium, underline"><strong>{item.link ? <a href={item.link} target="_blank">{item.name}</a> : item.name}</strong></h3>
-                  <p class="text-primary-950/70 dark:text-primary-200/70 text-base sm:text-lg">
+                  {item.footnote ? <p class="mt-0 text-sm text-gray-600 dark:text-gray-400">{item.footnote}</p> : <span></span>}
+                  <p class="mt-2 text-primary-950/70 dark:text-primary-200/70 text-base sm:text-lg">
                     {item.description}
                   </p>
                 </div>
