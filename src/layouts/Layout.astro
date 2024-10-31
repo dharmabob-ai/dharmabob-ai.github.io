@@ -4,6 +4,7 @@ import '@fontsource/inter/latin-500.css';
 import { ViewTransitions } from 'astro:transitions';
 import Footer from '../components/layout/Footer.astro';
 import Header from '../components/layout/Header.astro';
+import Matomo from '../components/analytics/Matomo.astro'
 
 interface Props {
   description: string;
@@ -70,5 +71,6 @@ const { description, title } = Astro.props;
       window.Alpine = Alpine;
       Alpine.start();
     </script>
+    <Matomo />
   </body>
 </html>
