@@ -1,0 +1,44 @@
+---
+const services = [
+  {
+    name: 'Livia Constantinescu',
+    link: 'https://www.linkedin.com/in/livia-constantinescu-bb1bb19',
+    image: '/assets/advisor-1.webp',
+    description:
+      'Livia Constantinescu, strategic advisor to Shree Collective, is a dedicated dharma practitioner with extensive investment experience with leading institutions. Her multifaceted background includes having founded a gallery for emerging artists. She uses her sharp focus and analytical skills to bridge diverse concepts across various user demographics, identifying commonalities that unite distinct audiences.',
+  },
+  {
+    name: 'Michael Burbank',
+    image: '/assets/advisor-2.webp',
+    description:
+      'Michael is an avid life-long Dharma student and practitioner, the former Executive Director of Tibet House US\' retreat center Menla (2013-2025), creative writer of Spi-Fi (Spirit Fiction) graphic novels, movies, and video games, and most recently a spiritual entrepreneur. One of Shree Collective\'s lead investors for its Dharma Bob initiative, Michael applies his lifelong passion for learning and spiritual growth to all of his endeavors in order to benefit as many beings as possible.',
+  },
+];
+---
+
+<section class="py-16 sm:py-20">
+  <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+    <div class="flex flex-col gap-12 sm:gap-16">
+      <h2 class="text-3xl font-medium tracking-tight sm:text-4xl">Advisors</h2>
+      <div class="grid gap-8 lg:grid-cols-3">
+        {
+          services.map((item) => (
+            <li class="bg-primary-500/10 dark:bg-primary-400/10 flex flex-col gap-12 rounded-3xl px-6 py-8">
+              <div class="space-y-6">
+                {item.link ? <a href={item.link} target="_blank"><img class="mx-auto h-auto w-64 rounded-lg" src={item.image} alt={item.name} /></a> : <img class="mx-auto h-auto w-64 rounded-lg" src={item.image} alt={item.name} />}
+                <div class="text-center">
+                  <h3 class="text-lg font-medium, underline"><strong>{item.link ? <a href={item.link} target="_blank">{item.name}</a> : item.name}</strong></h3>
+                  {item.footnote1 ? <p class="mt-0 text-sm text-gray-600 dark:text-gray-400">{item.footnote1}</p> : <span></span>}
+                  {item.footnote2 ? <p class="mt-0 text-sm text-gray-600 dark:text-gray-400">{item.footnote2}</p> : <span></span>}
+                  <p class="mt-2 text-primary-950/70 dark:text-primary-200/70 text-base sm:text-lg">
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+            </li>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>
