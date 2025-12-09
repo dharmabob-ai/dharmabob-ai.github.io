@@ -1,0 +1,42 @@
+---
+const services = [
+  {
+    name: 'Drata',
+    link: 'https://drata.com/',
+    description: 'HIPAA & SoC-2 Certification',
+  },
+  {
+    name: 'Fortra',
+    link: 'https://www.fortra.com/',
+    description: 'Cybersecurity',
+  },
+];
+---
+<section class="py-16 sm:py-20">
+  <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+    <div class="flex flex-col gap-12 sm:gap-16">
+      <h2 class="text-3xl font-medium tracking-tight sm:text-4xl">Critical Vendors</h2>
+      <div class="grid gap-8 lg:grid-cols-2">
+        {services.map((item) => (
+          <div class="bg-primary-500/10 dark:bg-primary-400/10 rounded-3xl p-8">
+            {/* The container for the name and description */}
+            <div class="flex flex-col sm:flex-row sm:items-center sm:gap-4">
+              <h3 class="text-2xl font-semibold shrink-0">
+                {item.link ? (
+                  <a href={item.link} target="_blank" class="hover:underline underline">
+                    {item.name}
+                  </a>
+                ) : (
+                  item.name
+                )}
+              </h3>
+              <p class="text-primary-950/80 dark:text-primary-200/80">
+                {item.description}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
