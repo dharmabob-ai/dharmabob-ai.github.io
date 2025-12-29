@@ -28,6 +28,7 @@ concurrency:
 
 env:
   BUILD_PATH: "." # default value when not using subfolders
+  WEB3_API_KEY: ${{ secrets.WEB3_API_KEY }}
   # BUILD_PATH: subfolder
 
 jobs:
