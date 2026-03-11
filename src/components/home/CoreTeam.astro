@@ -12,6 +12,7 @@ const services = [
   {
     name: 'Rajeev Panwar',
     link: 'https://www.linkedin.com/in/rajeev-panwar/',
+    slug: 'rajeev-panwar',
     image: '/assets/team-3.webp',
     description:
       'Rajeev Panwar, Founder and CEO of Shree Collective, brings a unique blend of financial acumen and spiritual depth to the organization. With extensive experience in data analytics, coupled with his deep practice in various yoga disciplines (300 Hours Advanced Vajra Yoga certified by Yoga Alliance) and reiki (Master level - Usui lineage), Rajeev leads Dharma Bob\'s mission-driven growth while fostering a holistic approach to personal development.',
@@ -70,7 +71,7 @@ const services = [
       <div class="grid gap-8 lg:grid-cols-3">
         {
           services.map((item) => (
-            <li class="bg-primary-500/10 dark:bg-primary-400/10 flex flex-col gap-12 rounded-3xl px-6 py-8">
+            <li id={item.slug} class="bg-primary-500/10 dark:bg-primary-400/10 flex flex-col gap-12 rounded-3xl px-6 py-8">
               <div class="space-y-6">
                 {item.link ? <a href={item.link} target="_blank"><img class="mx-auto h-auto w-64 rounded-lg" src={item.image} alt={item.name} /></a> : <img class="mx-auto h-auto w-64 rounded-lg" src={item.image} alt={item.name} />}
                 <div class="text-center">
